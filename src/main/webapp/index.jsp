@@ -1,98 +1,111 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kastro Kiran V</title>
-    <link rel="stylesheet" type="text/css" href="kastro.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-            min-height: 100vh;
-        }
-        .container {
-            flex: 1;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            flex-wrap: wrap;
-            padding: 20px;
-            box-sizing: border-box;
-            position: relative; /* Needed for absolute positioning of image */
-        }
-        .content {
-            flex-basis: 60%;
-            margin-bottom: 20px;
-        }
-        .image-container {
-            flex-basis: 35%;
-            text-align: right;
-            margin-top: auto; /* Pushes the image to the bottom */
-        }
-        .profile-image {
-            display: block;
-            max-width: 150px; /* Adjust the size as needed */
-            border-radius: 50%;
-            margin-top: 10px;
-            background-color: transparent; /* Ensure transparency */
-            position: absolute;
-            bottom: 10px;
-            right: 20px;
-        }
-        .copyright {
-            position: absolute;
-            bottom: 20px;
-            text-align: right;
-            width: 100%;
-            font-size: 12px; /* Adjust font size as needed */
-        }
-        .copyright .icon {
-            font-size: 14px;
-            margin-right: 5px;
-        }
-        .curriculum {
-            text-decoration: underline;
-        }
-        .name {
-            color: darkblue; /* Changed the color to DarkBlue */
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login Page</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-container {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 300px;
+    }
+
+    .login-container h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .login-btn {
+      width: 100%;
+      padding: 0.6rem;
+      background: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .login-btn:hover {
+      background: #45a049;
+    }
+
+    .error {
+      color: red;
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="content">
-            <h1Hello ... ! <span class="name">Cloud Enthusiast !</span></h1>
-            <p>My name is <span class="highlighted-name">Kastro</span>, I am an <span class="trainer">AWS and DevOps Trainer</span>.</p>
-            <p class="curriculum"><em>My Recommended curriculum to become a DevOps Engineer:</em></p>
-            <p><strong>AWS Concepts:</strong> Introduction to Cloud, Cloud Service Providers, AWS Global Infrastructure, S3, EFS, EC2, Auto Scaling, Load Balancers, VPC, IAM, RDS, Dynamo DB, SNS, Cloud Watch, LighSail, Cloud Trial, SQS, SES, Route 53, SnowBall, Elastic BeanStalk, Cloud Formation</p>
-            <p><strong>LINUX AND SHELL SCRIPTING</strong></p>
-            <p><strong>DevOps Concepts:</strong> System Architecture, Introduction to DevOps, SDLC - Concept & Models, Maven, Git, GitHub, Tomcat, Jenkins, Docker, Kubernetes, Terraform, Ansible, SonarQube</p>
-            <p>
-                <a href="https://youtube.com/playlist?list=PLs-PsDpuAuTdOcZa-DDgG8KRbtMI_XRrC&si=7qb7yp6si8oeNwDh" target="_blank">
-                    <button class="aws-button"><i class="fab fa-aws"></i> AWS FREE Tutorials</button>
-                </a>
-                <a href="https://www.youtube.com/playlist?list=PLs-PsDpuAuTeNx3OgGQ1QrpNBo-XE6VBh" target="_blank">
-                    <button class="docker-button"><i class="fab fa-docker"></i> Docker - Basics to Brilliance</button>
-                </a>
-                <a href="https://www.linkedin.com/in/kastro-kiran/" target="_blank">
-                    <button class="linkedin-button"><i class="fab fa-linkedin"></i> Kastro - LinkedIn</button>
-                </a>
-            </p>
-        </div>
-    </div>
-    <div class="image-container">
-        <!-- Image at the bottom right of the page -->
-        <img src="https://media.licdn.com/dms/image/D5603AQHJB_lF1d9OSw/profile-displayphoto-shrink_800_800/0/1718971147172?e=1724284800&v=beta&t=HJC2dPANaLQK7Rs4P6UoZvRAdz0Se5s5js9SvlzhXXI" alt="Profile Image" class="profile-image">
-    </div>
-    <div class="copyright">
-        <span class="icon">&copy;</span> Kastro
-    </div>
+  <div class="login-container">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" />
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" />
+      </div>
+      <button type="submit" class="login-btn">Login</button>
+      <div class="error" id="errorMsg"></div>
+    </form>
+  </div>
+
+  <script>
+    const loginForm = document.getElementById("loginForm");
+    const errorMsg = document.getElementById("errorMsg");
+
+    loginForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const username = document.getElementById("username").value.trim();
+      const password = document.getElementById("password").value.trim();
+
+      if (username === "" || password === "") {
+        errorMsg.textContent = "Please enter both username and password.";
+      } else {
+        errorMsg.textContent = "";
+        alert("Login successful!"); // Replace with actual login logic
+        // window.location.href = "/dashboard"; // Example redirect
+      }
+    });
+  </script>
 </body>
 </html>
